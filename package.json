@@ -1,7 +1,7 @@
 {
-  "name": "amazona",
+  "name": "Tiny Treasures HK",
   "version": "1.0.0",
-  "description": "Demo : https://amazonaapp.herokuapp.com/",
+  "description": "Personal Sourcing Service",
   "main": "index.js",
   "dependencies": {
     "aws-sdk": "^2.702.0",

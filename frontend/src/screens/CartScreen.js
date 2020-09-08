@@ -60,7 +60,7 @@ function CartScreen(props) {
                         <option key={x + 1} value={x + 1}>{x + 1}</option>
                       )}
                     </select>
-                    <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)} >
+                    <button type="button" className="delete-button" onClick={() => removeFromCartHandler(item.product)} >
                       Delete
                     </button>
                   </div>
@@ -76,7 +76,7 @@ function CartScreen(props) {
     </div>
     <div className="cart-action">
       <h3>
-        Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items)
+        Subtotal ( {cartItems.reduce((a, c) => +a + +c.qty, 0)} items)
         :
          $ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
       </h3>

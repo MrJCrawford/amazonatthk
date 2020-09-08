@@ -31,6 +31,7 @@ function HomeScreen(props) {
 
   return (
     <>
+      <img className="banner" src="\images\TinyTreasuresBanner.png" alt="banner"></img>
       {category && <h2>{category}</h2>}
 
       <ul className="filter">

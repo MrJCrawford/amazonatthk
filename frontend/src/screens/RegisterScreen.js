@@ -26,6 +26,7 @@ function RegisterScreen(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(register(name, email, password));
+    alert("Please Sign In!");
   }
   return <div className="form">
     <form onSubmit={submitHandler} >
@@ -66,7 +67,7 @@ function RegisterScreen(props) {
         </li>
         <li>
           Already have an account?
-          <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Create your amazona account</Link>
+          <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Sign in to your Tiny Treasure Account</Link>
 
         </li>
 

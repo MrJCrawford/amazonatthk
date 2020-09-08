@@ -115,7 +115,7 @@ function PlaceOrderScreen(props) {
             <div>${shippingPrice}</div>
           </li>
           <li>
-            <div>Tax</div>
+            <div>Service Fee</div>
             <div>${taxPrice}</div>
           </li>
           <li>

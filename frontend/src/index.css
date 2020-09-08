@@ -1,3 +1,11 @@
+:root {
+  --mainBanner:#9EC4C5;
+  --mainLightBanner:#C1DDD8;
+  --mainWhite:#f3f3f3;
+  --mainDark:#232528;
+  --mainYellow:#F2C2C2;
+}
+
 html {
   font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
@@ -28,8 +36,8 @@ button {
 }
 .header {
   grid-area: header;
-  background-color: #203040;
-  color: #ffffff;
+  background-color: var(--mainBanner);
+  color: var(--mainWhite);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +45,7 @@ button {
 }
 .brand a {
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
 }
@@ -47,14 +55,14 @@ button {
   padding: 1rem;
 }
 .header-links a:hover {
-  color: #ff8000;
+  color:var(--mainLightBanner);
 }
 .main {
   grid-area: main;
 }
 .footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: var(--mainBanner);
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -64,7 +72,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #ff8000;
+  color:var(--mainLightBanner);
 }
 /* Home Screen */
 .products {
@@ -145,10 +153,11 @@ a > .rating > span:last-child {
 }
 .sidebar {
   position: fixed;
-  transition: all 0.5s;
-  transform: translateX(-30rem);
-  width: 30rem;
-  background-color: #f0f0f0;
+  transition: all 0.5s; /*Side menu sliding effect*/
+  transform:translateX(-30rem);
+  width:30rem;
+  color:#ffffff;
+  background-color: var(--mainBanner);
   height: 100%;
 }
 .sidebar.open {
@@ -167,6 +176,15 @@ a > .rating > span:last-child {
   position: absolute;
   right: 0.5rem;
   top: 1.5rem;
+}
+
+.sidebar li{
+  list-style-type: none;
+  padding: 0.5rem;
+}
+.sidebar a{
+  text-decoration: none;
+  color: var(--mainWhite);
 }
 
 /* Product Details */
@@ -219,6 +237,12 @@ a > .rating > span:last-child {
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
+.delete-button {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
 .button:hover {
   border: 0.1rem #404040 solid;
 }

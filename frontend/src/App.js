@@ -31,10 +31,10 @@ function App() {
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <Link to="/">amazona</Link>
+            <Link to="/">Tiny Treasures HK</Link>
           </div>
           <div className="header-links">
-            <a href="cart.html">Cart</a>
+            <Link to="/cart">Cart</Link>
             {userInfo ? (
               <Link to="/profile">{userInfo.name}</Link>
             ) : (
@@ -60,11 +60,25 @@ function App() {
           </button>
           <ul className="categories">
             <li>
-              <Link to="/category/Pants">Pants</Link>
+              <Link to="/category/Montessori">Montessori</Link>
             </li>
-
             <li>
-              <Link to="/category/Shirts">Shirts</Link>
+              <Link to="/category/Pretend Play">Pretend Play</Link>
+            </li>
+            <li>
+              <Link to="/category/Learning & Education">Learning & Education</Link>
+            </li>
+            <li>
+              <Link to="/category/Electronics">Electronics</Link>
+            </li>
+            <li>
+              <Link to="/category/Play Vehicless">Play Vehicles</Link>
+            </li>
+            <li>
+              <Link to="/category/Books">Books</Link>
+            </li>
+            <li>
+              <Link to="/category/Other">Other</Link>
             </li>
           </ul>
         </aside>
