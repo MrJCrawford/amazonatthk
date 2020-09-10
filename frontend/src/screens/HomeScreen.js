@@ -32,8 +32,9 @@ function HomeScreen(props) {
   return (
     <>
       <img className="banner" src="\images\TinyTreasuresBanner.png" alt="banner"></img>
-      {category && <h2>{category}</h2>}
-
+      <hr/>
+      {category && <h2 style={{marginLeft:"0.5em", color:"var(--mainBanner)"}}>{category}</h2>}
+      
       <ul className="filter">
         <li>
           <form onSubmit={submitHandler}>
