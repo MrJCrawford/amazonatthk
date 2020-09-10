@@ -11,7 +11,7 @@ import cors from 'cors';
 
 const connection =  config.MONGODB_CONNECTION;
 
-mongoose.connect(connection,{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false})
+mongoose.connect(process.env.MONGODB_CONNECTION,{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false})
     .then(() => console.log("Database Connected Successfully"))
     .catch(err => console.log(err));
 

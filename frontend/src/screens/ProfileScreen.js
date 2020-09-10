@@ -18,7 +18,8 @@ function ProfileScreen(props) {
   }
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(update({ userId: userInfo._id, email, name, password }))
+    dispatch(update({ userId: userInfo._id, email, name, password }));
+    alert('Your Password has been Updated');
   }
   const userUpdate = useSelector(state => state.userUpdate);
   const { loading, success, error } = userUpdate;
