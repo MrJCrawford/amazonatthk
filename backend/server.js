@@ -9,6 +9,7 @@ import orderRoute from './routes/orderRoute';
 import uploadRoute from './routes/uploadRoute';
 import cors from 'cors';
 
+
 const connection =  config.MONGODB_CONNECTION;
 
 mongoose.connect(process.env.MONGODB_CONNECTION,{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false})
@@ -40,6 +41,10 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));
 });
 
+const { wakeDyno } = require('heroku-keep-awake');
+const DYNO_URL = 'https://tinytreasureshk.herokuapp.com/';
+
 app.listen(config.PORT, () => {
   console.log(`Server started on port ${config.PORT}`);
+  wakeDyno(DYNO_URL);
 });

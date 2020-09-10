@@ -144,8 +144,8 @@ function ProductsScreen(props) {
                   id="image"
                   onChange={(e) => setImage(e.target.value)}
                 ></input>
-                <input type="file" onChange={uploadFileHandler}></input>
-                {uploading && <div>Uploading...</div>}
+                {/* <input type="file" onChange={uploadFileHandler}></input>
+                {uploading && <div>Uploading...</div>} */}
               </li>
               <li>
                 <label htmlFor="brand">Brand</label>

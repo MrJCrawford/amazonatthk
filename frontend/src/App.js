@@ -99,7 +99,18 @@ function App() {
             <Route path="/" exact={true} component={HomeScreen} />
           </div>
         </main>
-        <footer className="footer">All right reserved.</footer>
+        <footer className="footer">
+        <ul style={{ listStyleType: "none", textAlign: 'center' }}>
+          <li>
+            <div>All right reserved.</div>
+          </li>
+          <li>
+              <div style={{ textAlign: 'center', fontSize : "0.8rem" }}>
+            Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+          </li>
+        </ul>
+        </footer>
       </div>
     </BrowserRouter>
   );
