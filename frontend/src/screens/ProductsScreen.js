@@ -122,6 +122,7 @@ function ProductsScreen(props) {
                   name="name"
                   value={name}
                   id="name"
+                  required
                   onChange={(e) => setName(e.target.value)}
                 ></input>
               </li>
@@ -132,6 +133,7 @@ function ProductsScreen(props) {
                   name="price"
                   value={price}
                   id="price"
+                  required
                   onChange={(e) => setPrice(e.target.value)}
                 ></input>
               </li>
@@ -142,6 +144,7 @@ function ProductsScreen(props) {
                   name="image"
                   value={image}
                   id="image"
+                  required
                   onChange={(e) => setImage(e.target.value)}
                 ></input>
                 {/* <input type="file" onChange={uploadFileHandler}></input>
@@ -154,6 +157,7 @@ function ProductsScreen(props) {
                   name="brand"
                   value={brand}
                   id="brand"
+                  required
                   onChange={(e) => setBrand(e.target.value)}
                 ></input>
               </li>
@@ -164,6 +168,7 @@ function ProductsScreen(props) {
                   name="countInStock"
                   value={countInStock}
                   id="countInStock"
+                  required
                   onChange={(e) => setCountInStock(e.target.value)}
                 ></input>
               </li>
@@ -174,6 +179,7 @@ function ProductsScreen(props) {
                   name="category"
                   value={category}
                   id="category"
+                  required
                   onChange={(e) => setCategory(e.target.value)}
                 ></input>
               </li>
@@ -183,6 +189,7 @@ function ProductsScreen(props) {
                   name="description"
                   value={description}
                   id="description"
+                  required
                   onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
               </li>
