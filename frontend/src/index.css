@@ -144,6 +144,7 @@ a:hover {
 .product-image {
   width: 100%;
   min-height: 20rem;
+  max-height: 25rem;
   border-radius: 0.8rem;
   object-fit: cover;
 }
@@ -153,7 +154,7 @@ a:hover {
 
 @media only screen and (max-width: 800px) {
   .products {
-    position: absolute;
+    position: flex;
     right:3.5rem;
     display: flex;
     justify-content: center;
@@ -201,6 +202,7 @@ a:hover {
  .product-image {
    width: 100%;
    min-height: 20rem;
+   max-height: 25rem;
    border-radius: 0.8rem;
    object-fit: cover;
  }
