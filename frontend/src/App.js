@@ -60,28 +60,28 @@ function App() {
           </button>
           <ul className="categories">
           <li>
-              <Link to="/">All</Link>
+              <Link to="/" onClick={closeMenu}>All</Link>
             </li>
             <li>
-              <Link to="/category/Montessori">Montessori</Link>
+              <Link to="/category/Montessori" onClick={closeMenu} >Montessori</Link>
             </li>
             <li>
-              <Link to="/category/Pretend Play">Pretend Play</Link>
+              <Link to="/category/Pretend Play" onClick={closeMenu}>Pretend Play</Link>
             </li>
             <li>
-              <Link to="/category/Learning & Education">Learning & Education</Link>
+              <Link to="/category/Learning & Education" onClick={closeMenu}>Learning & Education</Link>
             </li>
             <li>
-              <Link to="/category/Electronics">Electronics</Link>
+              <Link to="/category/Electronics" onClick={closeMenu}>Electronics</Link>
             </li>
             <li>
-              <Link to="/category/Play Vehicles">Play Vehicles</Link>
+              <Link to="/category/Play Vehicles" onClick={closeMenu}>Play Vehicles</Link>
             </li>
             <li>
-              <Link to="/category/Books">Books</Link>
+              <Link to="/category/Books" onClick={closeMenu}>Books</Link>
             </li>
             <li>
-              <Link to="/category/Other">Other</Link>
+              <Link to="/category/Other" onClick={closeMenu}>Other</Link>
             </li>
           </ul>
         </aside>
