@@ -3,11 +3,33 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { savePayment } from '../actions/cartActions';
 import CheckoutSteps from '../components/CheckoutSteps';
+import emailjs from 'emailjs-com'
 
 function PaymentScreen(props) {
   const [paymentMethod, setPaymentMethod] = useState('');
 
   const dispatch = useDispatch();
+
+  /*Attempting to send email to notify order */
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'gmail',
+        'tthk2orderform',
+        e.target,
+        'user_m49ol85bvoqFluF8IKatG'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -47,13 +69,28 @@ function PaymentScreen(props) {
                   onChange={(e) => setPaymentMethod(e.target.value)}
                 ></input>
                 <label for="paymentMethod">PayMe HSBC</label>
-              </div>
+               </div>
+            </li>
+            <li>
+              <div>
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  id="paymentMethod"
+                  value="BankTransfer"
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                ></input>
+                <label for="paymentMethod">Bank Transfer</label>
+               </div>
             </li>
 
             <li>
-              <button type="submit" className="button primary">
+                <form className="gotOrder" onSubmit={sendEmail}>
+                <textarea style={{display:"none"}} name="GotOrder" defaultValue="You've Got an Order!" />
+                <button type="submit" className="button primary">
                 Continue
-              </button>
+                </button>
+              </form>
             </li>
           </ul>
         </form>

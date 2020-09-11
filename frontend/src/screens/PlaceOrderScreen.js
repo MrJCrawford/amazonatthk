@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder } from '../actions/orderActions';
 
+
 function PlaceOrderScreen(props) {
 
   const cart = useSelector(state => state.cart);
@@ -46,8 +47,9 @@ function PlaceOrderScreen(props) {
       taxPrice, totalPrice, itemsWeight
     }));
     alert("Your Order has been placed. We will get in contact with you very soon!");
-    console.log(shippingPrice);
+    
   }
+  
   useEffect(() => {
     if (success) {
       props.history.push("/order/" + order._id);
@@ -141,10 +143,7 @@ function PlaceOrderScreen(props) {
             <div>Order Total</div>
             <div>${totalPrice}</div>
           </li>
-        </ul>
-
-
-
+        </ul>    
       </div>
 
     </div>
