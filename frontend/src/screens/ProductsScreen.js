@@ -13,6 +13,10 @@ function ProductsScreen(props) {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
+  const [image2, setImage2] = useState('');
+  const [image3, setImage3] = useState('');
+  const [image4, setImage4] = useState('');
+  const [image5, setImage5] = useState('');
   const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState('');
@@ -53,6 +57,10 @@ function ProductsScreen(props) {
     setPrice(product.price);
     setDescription(product.description);
     setImage(product.image);
+    setImage2(product.image2);
+    setImage3(product.image3);
+    setImage4(product.image4);
+    setImage5(product.image5);
     setBrand(product.brand);
     setCategory(product.category);
     setCountInStock(product.countInStock);
@@ -65,6 +73,10 @@ function ProductsScreen(props) {
         name,
         price,
         image,
+        image2,
+        image3,
+        image4,
+        image5,
         brand,
         category,
         countInStock,
@@ -75,26 +87,26 @@ function ProductsScreen(props) {
   const deleteHandler = (product) => {
     dispatch(deleteProdcut(product._id));
   };
-  const uploadFileHandler = (e) => {
-    const file = e.target.files[0];
-    const bodyFormData = new FormData();
-    bodyFormData.append('image', file);
-    setUploading(true);
-    axios
-      .post('/api/uploads', bodyFormData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      })
-      .then((response) => {
-        setImage(response.data);
-        setUploading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setUploading(false);
-      });
-  };
+  // // const uploadFileHandler = (e) => {
+  // //   const file = e.target.files[0];
+  // //   const bodyFormData = new FormData();
+  // //   bodyFormData.append('image', file);
+  // //   setUploading(true);
+  // //   axios
+  // //     .post('/api/uploads', bodyFormData, {
+  // //       headers: {
+  // //         'Content-Type': 'multipart/form-data',
+  // //       },
+  // //     })
+  // //     .then((response) => {
+  // //       setImage(response.data);
+  // //       setUploading(false);
+  // //     })
+  // //     .catch((err) => {
+  // //       console.log(err);
+  // //       setUploading(false);
+  // //     });
+  // };
   return (
     <div className="content content-margined">
       <div className="product-header">
@@ -146,6 +158,38 @@ function ProductsScreen(props) {
                   id="image"
                   required
                   onChange={(e) => setImage(e.target.value)}
+                ></input>
+                <label htmlFor="image2">Image2</label>
+                <input
+                  type="text"
+                  name="image2"
+                  value={image2}
+                  id="image2"
+                  onChange={(e) => setImage2(e.target.value)}
+                ></input>
+                <label htmlFor="image3">Image3</label>
+                <input
+                  type="text"
+                  name="image3"
+                  value={image3}
+                  id="image3"
+                  onChange={(e) => setImage3(e.target.value)}
+                ></input>
+                <label htmlFor="image4">Imag4e</label>
+                <input
+                  type="text"
+                  name="image4"
+                  value={image4}
+                  id="image4"
+                  onChange={(e) => setImage4(e.target.value)}
+                ></input>
+                <label htmlFor="image5">Image5</label>
+                <input
+                  type="text"
+                  name="image5"
+                  value={image5}
+                  id="image5"
+                  onChange={(e) => setImage5(e.target.value)}
                 ></input>
                 {/* <input type="file" onChange={uploadFileHandler}></input>
                 {uploading && <div>Uploading...</div>} */}

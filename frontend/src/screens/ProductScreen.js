@@ -57,12 +57,29 @@ function ProductScreen(props) {
         <>
           <div className="details">
             <div className="details-image">
-              <img src={product.image} alt="product"></img>
+              <ul>
+                <li>
+                <img src={product.image} alt="product"></img>
+                </li>
+                <li>
+                <img src={product.image2} alt=""></img>
+                </li>
+                <li>
+                <img src={product.image3} alt=""></img>
+                </li>
+                <li>
+                <img src={product.image4} alt=""></img>
+                </li>
+                <li>
+                <img src={product.image5} alt=""></img>
+                </li>
+              </ul>
+
             </div>
             <div className="details-info">
               <ul>
                 <li>
-                  <h4>{product.name}</h4>
+                  <h2>{product.name}</h2>
                 </li>
                 <li>
                   <a href="#reviews">
