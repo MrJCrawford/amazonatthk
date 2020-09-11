@@ -26,8 +26,13 @@ function PlaceOrderScreen(props) {
     tempWeight = 28} else {
     tempWeight = 28 + (Math.ceil((itemsWeight-1)*2)*5)
     }
-  const shippingPrice = tempWeight;
-  const taxPrice = 0.15 * itemsPrice;
+  let tempService = 0;
+  if (itemsPrice<100){
+    tempService = 15} else {
+    tempService = itemsPrice * 0.15
+    }
+  const shippingPrice = parseFloat(tempWeight.toFixed(2));
+  const taxPrice = parseFloat(tempService.toFixed(2));
   const totalPrice = itemsPrice + shippingPrice + taxPrice;
 
   /* Requested to have full price at cart IF FORMULA CHANGES MODIFY THERE AS WELL*/

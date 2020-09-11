@@ -153,6 +153,8 @@ a:hover {
 
 @media only screen and (max-width: 800px) {
   .products {
+    position: absolute;
+    right:3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,6 +400,7 @@ a > .rating > span:last-child {
 }
 .cart-name {
   flex: 8 1;
+  margin: 1rem;
 }
 .cart-price {
   flex: 1 1;

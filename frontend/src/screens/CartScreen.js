@@ -10,16 +10,21 @@ function CartScreen(props) {
   const { cartItems } = cart;
 
 /* Requested to have full price at cart IF FORMULA CHANGES MODIFY HERE*/
+const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
 const itemsWeight = cartItems.reduce((a, c) => a + c.weight * c.qty, 0);
 let tempWeight = 0;
 if (itemsWeight<1){
   tempWeight = 28} else {
   tempWeight = 28 + (Math.ceil((itemsWeight-1)*2)*5)
   }
-const shippingPrice = tempWeight;
-const subTotal= cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-const serviceFee= subTotal*0.15
-const total = subTotal + serviceFee + shippingPrice
+let tempService = 0;
+if (itemsPrice<100){
+  tempService = 15} else {
+  tempService = itemsPrice * 0.15
+  }
+const shippingPrice = parseFloat(tempWeight.toFixed(2));
+const taxPrice = parseFloat(tempService.toFixed(2));
+const totalPrice = itemsPrice + shippingPrice + taxPrice;
 /* Requested to have full price at cart IF FORMULA CHANGES MODIFY HERE*/
 
   const productId = props.match.params.id;
@@ -92,7 +97,7 @@ const total = subTotal + serviceFee + shippingPrice
       <h4>
         Subtotal ( {cartItems.reduce((a, c) => +a + +c.qty, 0)} items)
         :
-         $ {subTotal}
+         $ {itemsPrice}
 
          
       </h4>
@@ -100,10 +105,10 @@ const total = subTotal + serviceFee + shippingPrice
       Shipping: $ {shippingPrice}
       </h4>
       <h4>
-      Service Fee: $ {serviceFee}
+      Service Fee: $ {taxPrice}
       </h4>
       <h4>
-      Total : $ {total} HKD
+      Total : $ {totalPrice} HKD
       </h4>
 
       </div>    
