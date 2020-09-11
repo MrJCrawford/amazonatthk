@@ -11,6 +11,7 @@ function ProductsScreen(props) {
   const [modalVisible, setModalVisible] = useState(false);
   const [id, setId] = useState('');
   const [name, setName] = useState('');
+  const [weight, setWeight] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
   const [image2, setImage2] = useState('');
@@ -55,6 +56,7 @@ function ProductsScreen(props) {
     setId(product._id);
     setName(product.name);
     setPrice(product.price);
+    setWeight(product.weight);
     setDescription(product.description);
     setImage(product.image);
     setImage2(product.image2);
@@ -72,6 +74,7 @@ function ProductsScreen(props) {
         _id: id,
         name,
         price,
+        weight,
         image,
         image2,
         image3,
@@ -147,6 +150,17 @@ function ProductsScreen(props) {
                   id="price"
                   required
                   onChange={(e) => setPrice(e.target.value)}
+                ></input>
+              </li>
+              <li>
+                <label htmlFor="weight">Weight</label>
+                <input
+                  type="text"
+                  name="weight"
+                  value={weight}
+                  id="weight"
+                  required
+                  onChange={(e) => setWeight(e.target.value)}
                 ></input>
               </li>
               <li>
@@ -264,7 +278,7 @@ function ProductsScreen(props) {
               <th>Name</th>
               <th>Price</th>
               <th>Category</th>
-              <th>Brand</th>
+              <th>Weight</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -275,7 +289,7 @@ function ProductsScreen(props) {
                 <td>{product.name}</td>
                 <td>{product.price}</td>
                 <td>{product.category}</td>
-                <td>{product.brand}</td>
+                <td>{product.weight}</td>
                 <td>
                   <button className="button" onClick={() => openModal(product)}>
                     Edit

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder } from '../actions/orderActions';
+
 function PlaceOrderScreen(props) {
 
   const cart = useSelector(state => state.cart);
@@ -16,7 +17,13 @@ function PlaceOrderScreen(props) {
     props.history.push("/payment");
   }
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-  const shippingPrice = itemsPrice > 100 ? 0 : 10;
+  const itemsWeight = cartItems.reduce((a, c) => a + c.weight * c.qty, 0);
+  let tempWeight = 0;
+  if (itemsWeight<1){
+    tempWeight = 28} else {
+    tempWeight = 28 + (Math.ceil((itemsWeight-1)*2)*5)
+    }
+  const shippingPrice = tempWeight;
   const taxPrice = 0.15 * itemsPrice;
   const totalPrice = itemsPrice + shippingPrice + taxPrice;
 
@@ -26,8 +33,10 @@ function PlaceOrderScreen(props) {
     // create an order
     dispatch(createOrder({
       orderItems: cartItems, shipping, payment, itemsPrice, shippingPrice,
-      taxPrice, totalPrice
+      taxPrice, totalPrice, itemsWeight
     }));
+    alert("Your Order has been placed. We will get in contact with you very soon!");
+    console.log(shippingPrice);
   }
   useEffect(() => {
     if (success) {

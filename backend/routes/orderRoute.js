@@ -39,6 +39,7 @@ router.post("/", isAuth, async (req, res) => {
     shipping: req.body.shipping,
     payment: req.body.payment,
     itemsPrice: req.body.itemsPrice,
+    itemsWeight: req.body.itemsWeight,
     taxPrice: req.body.taxPrice,
     shippingPrice: req.body.shippingPrice,
     totalPrice: req.body.totalPrice,

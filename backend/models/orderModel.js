@@ -13,6 +13,7 @@ const paymentSchema = {
 const orderItemSchema = new mongoose.Schema({
   name: { type: String, required: true },
   qty: { type: Number, required: true },
+  weight: { type: Number, required: true },
   image: { type: String, required: true },
   price: { type: String, required: true },
   product: {
@@ -28,6 +29,7 @@ const orderSchema = new mongoose.Schema({
   shipping: shippingSchema,
   payment: paymentSchema,
   itemsPrice: { type: Number },
+  itemsWeight: { type: Number },
   taxPrice: { type: Number },
   shippingPrice: { type: Number },
   totalPrice: { type: Number },

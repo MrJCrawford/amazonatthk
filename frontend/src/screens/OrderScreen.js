@@ -48,7 +48,8 @@ function OrderScreen(props) {
               Payment Method: {order.payment.paymentMethod}
             </div>
             <div>
-              {order.isPaid ? "Paid at " + order.paidAt : "Not Paid."}
+              {/* Paypal Connection*/}
+              {/* {order.isPaid ? "Paid at " + order.paidAt : "Not Paid."} */}
             </div>
           </div>
           <div>
@@ -96,14 +97,14 @@ function OrderScreen(props) {
         </div>
         <div className="placeorder-action">
           <ul>
-            <li className="placeorder-actions-payment">
+            {/* <li className="placeorder-actions-payment">
               {loadingPay && <div>Finishing Payment...</div>}
               {!order.isPaid &&
                 <PaypalButton
                   amount={order.totalPrice}
                   onSuccess={handleSuccessPayment} />
               }
-            </li>
+            </li> */}
             <li>
               <h3>Order Summary</h3>
             </li>
@@ -123,8 +124,12 @@ function OrderScreen(props) {
               <div>Order Total</div>
               <div>${order.totalPrice}</div>
             </li>
+            
           </ul>
 
+          <div>
+            <h4>Please Transfer $ {order.totalPrice} to 60261084 via Payme to complete your order.</h4>
+            </div>
 
 
         </div>
