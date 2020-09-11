@@ -28,7 +28,9 @@ function HomeScreen(props) {
     setSortOrder(e.target.value);
     dispatch(listProducts(category, searchKeyword, sortOrder));
   };
-
+  const sortHandlerValue = (e) => {
+    setSortOrder(e.target.value);
+  };
   return (
     <>
       <img className="banner" src="\images\TinyTreasuresBanner.png" alt="banner"></img>
@@ -47,7 +49,7 @@ function HomeScreen(props) {
           </form>
         </li>
         <li>
-          <select name="sortOrder" onChange={sortHandler}>
+          <select name="sortOrder" onChange={sortHandlerValue}>
             <option value="">Newest</option>
             <option value="lowest">Lowest</option>
             <option value="highest">Highest</option>
