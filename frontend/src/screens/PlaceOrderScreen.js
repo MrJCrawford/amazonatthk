@@ -16,6 +16,9 @@ function PlaceOrderScreen(props) {
   } else if (!payment.paymentMethod) {
     props.history.push("/payment");
   }
+
+  /* Requested to have full price at cart IF FORMULA CHANGES MODIFY THERE AS WELL*/
+
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
   const itemsWeight = cartItems.reduce((a, c) => a + c.weight * c.qty, 0);
   let tempWeight = 0;
@@ -26,6 +29,8 @@ function PlaceOrderScreen(props) {
   const shippingPrice = tempWeight;
   const taxPrice = 0.15 * itemsPrice;
   const totalPrice = itemsPrice + shippingPrice + taxPrice;
+
+  /* Requested to have full price at cart IF FORMULA CHANGES MODIFY THERE AS WELL*/
 
   const dispatch = useDispatch();
 

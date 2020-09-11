@@ -2,11 +2,25 @@ import React, { useEffect } from 'react';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PlaceOrderSCreen from "./PlaceOrderScreen"
 function CartScreen(props) {
 
   const cart = useSelector(state => state.cart);
 
   const { cartItems } = cart;
+
+/* Requested to have full price at cart IF FORMULA CHANGES MODIFY HERE*/
+const itemsWeight = cartItems.reduce((a, c) => a + c.weight * c.qty, 0);
+let tempWeight = 0;
+if (itemsWeight<1){
+  tempWeight = 28} else {
+  tempWeight = 28 + (Math.ceil((itemsWeight-1)*2)*5)
+  }
+const shippingPrice = tempWeight;
+const subTotal= cartItems.reduce((a, c) => a + c.price * c.qty, 0);
+const serviceFee= subTotal*0.15
+const total = subTotal + serviceFee + shippingPrice
+/* Requested to have full price at cart IF FORMULA CHANGES MODIFY HERE*/
 
   const productId = props.match.params.id;
   const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
@@ -75,16 +89,27 @@ function CartScreen(props) {
 
     </div>
     <div className="cart-action">
-      <h3>
+      <h4>
         Subtotal ( {cartItems.reduce((a, c) => +a + +c.qty, 0)} items)
         :
-         $ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
-      </h3>
+         $ {subTotal}
+
+         
+      </h4>
+      <h4>
+      Shipping: $ {shippingPrice}
+      </h4>
+      <h4>
+      Service Fee: $ {serviceFee}
+      </h4>
+      <h4>
+      Total : $ {total} HKD
+      </h4>
+
+      </div>    
       <button onClick={checkoutHandler} className="button primary full-width" disabled={cartItems.length === 0}>
         Proceed to Checkout
       </button>
-
-    </div>
 
   </div>
 }
