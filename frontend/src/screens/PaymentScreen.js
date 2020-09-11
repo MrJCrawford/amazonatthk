@@ -85,7 +85,7 @@ function PaymentScreen(props) {
             </li>
 
             <li>
-                <form className="gotOrder" onSubmit={sendEmail}>
+                <form className="gotOrder" onSubmit={}>
                 <textarea style={{display:"none"}} name="GotOrder" defaultValue="You've Got an Order!" />
                 <button type="submit" className="button primary">
                 Continue
