@@ -59,6 +59,9 @@ function App() {
             x
           </button>
           <ul className="categories">
+          <li>
+              <Link to="/">All</Link>
+            </li>
             <li>
               <Link to="/category/Montessori">Montessori</Link>
             </li>
@@ -72,7 +75,7 @@ function App() {
               <Link to="/category/Electronics">Electronics</Link>
             </li>
             <li>
-              <Link to="/category/Play Vehicless">Play Vehicles</Link>
+              <Link to="/category/Play Vehicles">Play Vehicles</Link>
             </li>
             <li>
               <Link to="/category/Books">Books</Link>
