@@ -14,6 +14,7 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
+import AboutUsScreen from './screens/AboutUsScreen';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -69,7 +70,7 @@ function App() {
               <Link to="/category/Pretend Play" onClick={closeMenu}>Pretend Play</Link>
             </li>
             <li>
-              <Link to="/category/Learning & Education" onClick={closeMenu}>Learning & Education</Link>
+              <Link to="/category/Learning and Education" onClick={closeMenu}>Learning and Education</Link>
             </li>
             <li>
               <Link to="/category/Electronics" onClick={closeMenu}>Electronics</Link>
@@ -82,6 +83,10 @@ function App() {
             </li>
             <li>
               <Link to="/category/Other" onClick={closeMenu}>Other</Link>
+            </li>
+            <hr/>
+            <li>
+              <Link to="/aboutus" onClick={closeMenu}>About Us</Link>
             </li>
           </ul>
         </aside>
@@ -100,6 +105,7 @@ function App() {
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
+            <Route path="/aboutus" exact={true} component={AboutUsScreen} />
           </div>
         </main>
         <footer className="footer">

@@ -37,7 +37,7 @@ function SigninScreen(props) {
         </li>
         <li>
           <label htmlFor="email">
-            Email
+            Email (case sensitive)
           </label>
           <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
           </input>

@@ -241,7 +241,7 @@ function ProductsScreen(props) {
                         >
                           <option value="Montessori">Montessori</option>
                           <option value="Pretend Play">Pretend Play</option>
-                          <option value="Learning & Education">Learning & Education</option>
+                          <option value="Learning and Education">Learning and Education</option>
                           <option value="Electronics">Electronics</option>
                           <option value="Play Vehicles">Play Vehicles</option>
                           <option value="Books">Books</option>

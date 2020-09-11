@@ -609,3 +609,17 @@ tbody > tr:nth-child(odd) {
   height: 14px;
   width: 120px;
 }
+/*About Us*/
+
+.about-section {
+  padding: 50px;
+  text-align: left;
+  background-color: var(--mainWhite);
+  color: var(--mainDark);
+}
+
+.about-section-list{
+    font-size: 2rem;
+    margin: 0 0 0 2rem;
+    padding: 0.5rem;
+}
