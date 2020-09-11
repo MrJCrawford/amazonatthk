@@ -39,6 +39,7 @@ function HomeScreen(props) {
         <li>
           <form onSubmit={submitHandler}>
             <input
+              className="SearchBar"
               name="searchKeyword"
               onChange={(e) => setSearchKeyword(e.target.value)}
             />
@@ -46,12 +47,12 @@ function HomeScreen(props) {
           </form>
         </li>
         <li>
-          Sort By{' '}
           <select name="sortOrder" onChange={sortHandler}>
             <option value="">Newest</option>
             <option value="lowest">Lowest</option>
             <option value="highest">Highest</option>
           </select>
+          <button onClick={sortHandler}>Sort</button>
         </li>
       </ul>
       {loading ? (
