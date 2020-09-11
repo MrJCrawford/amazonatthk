@@ -95,6 +95,7 @@ hr { /*Line underneath Banner*/
 a {
   text-decoration: none;
 }
+
 a:hover {
   color:var(--mainLightBanner);
 }
@@ -133,6 +134,12 @@ a:hover {
   font-size: 2rem;
   font-weight: bold;
 }
+.product-name a:link {
+  color: #606060;
+}
+.product-name a:visited {
+  color: #707070;
+}
 .product-brand {
   font-size: 1.2rem;
   color: #808080;
@@ -143,8 +150,8 @@ a:hover {
 }
 .product-image {
   width: 100%;
-  min-height: 20rem;
-  max-height: 25rem;
+  min-height: 25rem;
+  max-height: 30rem;
   border-radius: 0.8rem;
   object-fit: cover;
 }
@@ -155,7 +162,6 @@ a:hover {
 @media only screen and (max-width: 800px) {
   .products {
     position: flex;
-    right:3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -324,6 +330,13 @@ a > .rating > span:last-child {
 .back-to-result {
   padding: 1rem;
 }
+.back-to-result a:link{
+  color: var(--mainBanner);
+}
+.back-to-result a:visited{
+  color: var(--mainBanner);
+}
+
 .details-action {
   border: 0.1rem #808080 solid;
   border-radius: 0.5rem;
