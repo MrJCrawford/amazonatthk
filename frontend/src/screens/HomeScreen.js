@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import Rating from '../components/Rating';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState('');
@@ -37,6 +37,13 @@ function HomeScreen(props) {
       <hr/>
       {category && <h2 style={{marginLeft:"0.5em", color:"var(--mainBanner)"}}>{category}</h2>}
       
+      <div>
+    <MessengerCustomerChat
+      pageId="101815671634491"
+      appId="693240431289264"
+    />
+      </div>
+
       <ul className="filter">
         <li>
           <form onSubmit={submitHandler}>
