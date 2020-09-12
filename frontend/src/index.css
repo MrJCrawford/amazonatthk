@@ -101,10 +101,11 @@ a:hover {
 }
 /* Home Screen */
 .products {
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 95%;
 }
 .products li {
   background: white;
@@ -161,17 +162,18 @@ a:hover {
 
 @media only screen and (max-width: 800px) {
   .products {
-    position: flex;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 88%;
+
  }
  .products li {
    background: white;
    list-style-type: none;
    padding: 0;
-   flex: 1 1 10.5rem;
+   flex: 01 1 15rem;
    margin: 0.5rem;
    height: 30rem;
    border-bottom: 0.1rem #c0c0c0 solid;
@@ -188,10 +190,9 @@ a:hover {
  .product {
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: space-evenly;
    height: 100%;
    flex-basis: 100%;
-   flex: 1;
  }
  .product-name {
    font-size: 2rem;
@@ -299,9 +300,11 @@ a > .rating > span:last-child {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 1rem;
+  max-width: 88%;
 }
 .details-image {
-  flex: 2 1 60rem;
+  flex: 1 1 40rem;
+  margin-right: 2rem;
 }
 .details-image li{
   list-style-type: none;
