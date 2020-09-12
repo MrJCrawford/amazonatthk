@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder } from '../actions/orderActions';
-
+import Tippy from '@tippyjs/react';
+import InfoIcon from '@material-ui/icons/Info';
+import 'tippy.js/dist/tippy.css';
 
 function PlaceOrderScreen(props) {
 
@@ -37,6 +39,16 @@ function PlaceOrderScreen(props) {
   const totalPrice = itemsPrice + shippingPrice + taxPrice;
 
   /* Requested to have full price at cart IF FORMULA CHANGES MODIFY THERE AS WELL*/
+
+  /*Tippy for Service Charge */
+
+
+const ServiceChargeIcon = () => (
+  <Tippy content={<span>The Service Charge is 15% of the Subtotal. The Minimum Charge is 15 HKD.</span>}>
+    <InfoIcon/>
+  </Tippy>
+)
+/*Tippy for Service Charge */
 
   const dispatch = useDispatch();
 
@@ -136,7 +148,7 @@ function PlaceOrderScreen(props) {
             <div>${shippingPrice}</div>
           </li>
           <li>
-            <div>Service Fee</div>
+            <div>Service Fee <ServiceChargeIcon/></div>
             <div>${taxPrice}</div>
           </li>
           <li>

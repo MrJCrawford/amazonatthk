@@ -2,7 +2,21 @@ import React, { useEffect } from 'react';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import PlaceOrderSCreen from "./PlaceOrderScreen"
+
+
+/*Tippy for Service Charge */
+import Tippy from '@tippyjs/react';
+import InfoIcon from '@material-ui/icons/Info';
+import 'tippy.js/dist/tippy.css';
+
+const ServiceChargeIcon = () => (
+  <Tippy content={<span>The Service Charge is 15% of the Subtotal. The Minimum Charge is 15 HKD.</span>}>
+    <InfoIcon/>
+  </Tippy>
+)
+/*Tippy for Service Charge */
+
+
 function CartScreen(props) {
 
   const cart = useSelector(state => state.cart);
@@ -43,7 +57,8 @@ const totalPrice = itemsPrice + shippingPrice + taxPrice;
     props.history.push("/signin?redirect=shipping");
   }
 
-  return <div className="cart">
+  return ( 
+  <div className="cart">
     <div className="cart-list">
       <ul className="cart-list-container">
         <li>
@@ -104,9 +119,7 @@ const totalPrice = itemsPrice + shippingPrice + taxPrice;
       <h4>
       Shipping: $ {shippingPrice}
       </h4>
-      <h4>
-      Service Fee: $ {taxPrice}
-      </h4>
+      <h4>Service Fee: $ {taxPrice}  <ServiceChargeIcon/></h4>
       <h4>
       Total : $ {totalPrice} HKD
       </h4>
@@ -117,6 +130,6 @@ const totalPrice = itemsPrice + shippingPrice + taxPrice;
       </button>
 
   </div>
-}
+  )}
 
 export default CartScreen;

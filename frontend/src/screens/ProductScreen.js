@@ -47,7 +47,7 @@ function ProductScreen(props) {
   return (
     <div>
       <div className="back-to-result">
-        <Link to="/">Back to result</Link>
+        <Link to="/">Back to Results</Link>
       </div>
       {loading ? (
         <div>Loading...</div>
@@ -91,6 +91,9 @@ function ProductScreen(props) {
                 </li>
                 <li>
                   Price: <b>${product.price} HKD</b>
+                </li>
+                <li>
+                  <Link to="/aboutus">Shipping and Service calculated at checkout.</Link>
                 </li>
                 <li>
                   Description:

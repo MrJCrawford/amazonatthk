@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom';
 
 export default class AboutUsScreen extends Component {
 
   render() {
     return (
       <React.Fragment>
-      <div className="about-section">
+      <div className="back-to-result">
+      <Link to="/">Back to Results</Link>
+      </div>
+            <div className="about-section">
             <h2>About Us</h2>
             <h4>We at Tiny Treasures Hong Kong would like to help your tiny ones find the best products at the most reasonable prices possible.
             After having my little one, I noticed while shopping online, people were quoting wide prices and taking advantage of parents whom don't have the time or had difficulty accessing the platform and I wanted to offer my knowledge and services to help source the best bargains for your little ones!
