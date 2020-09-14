@@ -15,6 +15,8 @@ import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import AboutUsScreen from './screens/AboutUsScreen';
+import ScrollIntoView from "./components/ScrollIntoView";
+
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -28,6 +30,7 @@ function App() {
   };
   return (
     <BrowserRouter>
+    <ScrollIntoView>
       <div className="grid-container">
         <header className="header">
           <div className="brand">
@@ -121,6 +124,7 @@ function App() {
         </ul>
         </footer>
       </div>
+      </ScrollIntoView>
     </BrowserRouter>
   );
 }

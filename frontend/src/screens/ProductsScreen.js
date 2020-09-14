@@ -189,7 +189,7 @@ function ProductsScreen(props) {
                   id="image3"
                   onChange={(e) => setImage3(e.target.value)}
                 ></input>
-                <label htmlFor="image4">Imag4e</label>
+                <label htmlFor="image4">Image4</label>
                 <input
                   type="text"
                   name="image4"
