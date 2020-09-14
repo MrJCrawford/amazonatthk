@@ -92,6 +92,7 @@ const ServiceChargeIcon = () => (
 
             <li>
             For HSBC Payme: <a href=" https://payme.hsbc/60261084" target="_blank" rel="noopener noreferrer"> Tap to PayMe!</a>
+            <img src="\images\hsbcpayme.jpg" alt="HSBC"></img>
             </li>
             <li>
             For FPS: Payment can be sent to 60261084.
