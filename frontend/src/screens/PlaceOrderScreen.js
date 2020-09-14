@@ -89,18 +89,17 @@ const ServiceChargeIcon = () => (
             Payment Method: {cart.payment.paymentMethod}
             </li>
             <ol className="payment-methods">
-
-            <li>
-            For HSBC Payme: <a href=" https://payme.hsbc/60261084" target="_blank" rel="noopener noreferrer"> Tap to PayMe!</a>
-            </li>
-            <img className="payme" src="\images\hsbcpayme.jpg" alt="payme"></img>
-            <li>
-            For FPS: Payment can be sent to 60261084.
-            </li>
-            <li>
-            For Bank Transfer:
-            <p>HSBC bank account 405 222 043 292 (Chan T** W**g)</p>
-            </li>
+              <li>
+              For HSBC Payme: <a href=" https://payme.hsbc/60261084" target="_blank" rel="noopener noreferrer"> Tap to PayMe!</a>
+              </li>
+              <img className="payme" src="\images\hsbcpayme.jpg" alt="payme"></img>
+              <li>
+              For FPS: Payment can be sent to 60261084.
+              </li>
+              <li>
+              For Bank Transfer:
+              <p>HSBC bank account 405 222 043 292 (Chan T** W**g)</p>
+              </li>
             </ol>
 
 
