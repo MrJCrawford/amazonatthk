@@ -541,6 +541,9 @@ tbody > tr:nth-child(odd) {
 .placeorder-actions-payment > div {
   width: 100%;
 }
+.payment-methods li{
+  margin-bottom: 1rem;
+}
 
 /* Profile */
 

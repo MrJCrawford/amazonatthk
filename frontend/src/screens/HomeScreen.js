@@ -33,7 +33,7 @@ function HomeScreen(props) {
   };
   return (
     <>
-      <img className="banner" src="\images\TinyTreasuresBanner.png" alt="banner"></img>
+      <img className="banner" src="\images\TinyTreasuresBanner.png" alt="banner" />
       <hr/>
       {category && <h2 style={{marginLeft:"0.5em", color:"var(--mainBanner)"}}>{category}</h2>}
 
