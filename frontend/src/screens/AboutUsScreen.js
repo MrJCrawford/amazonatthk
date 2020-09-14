@@ -25,7 +25,7 @@ export default class AboutUsScreen extends Component {
             <li className="about-section-list">I will be using SF Express Delivery and you will have to pay for the shipping fee upon the goods arriving (Note: I can offer you bulk shipping service - so delivery fees will be at a minimum)</li>
             <li className="about-section-list">Orders will be made upon receiving the full amount</li>
             </ol>
-            <h2>T&C:</h2>
+            <h2>Terms and Conditions:</h2>
             <h4>Please note Tiny Treasures Hong Kong is not liable for any items that may not be of a high standard or if there is any damage to it. I will do my best to reslove any problems and will waive the service fee should you wish to re-order the same item.
             If any items have been damaged then please take a photo and keep the packaging. Any items that needs to be sent back will have to be paid by you. 
             </h4>
