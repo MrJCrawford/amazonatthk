@@ -59,7 +59,8 @@ function OrdersScreen(props) {
               <td>
                 <Link to={"/order/" + order._id} className="button secondary" >Details</Link>
                 {' '}
-                <button type="button" onClick={() => deleteHandler(order)} className="button secondary">Delete</button>
+                {/* <button type="button" onClick={() => deleteHandler(order)} className="button secondary">Delete</button> */} 
+                {/* Disabled just in case we delete an order by mistake */}
               </td>
             </tr>))}
           </tbody>
