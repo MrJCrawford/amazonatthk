@@ -58,9 +58,12 @@ const totalPrice = itemsPrice + shippingPrice + taxPrice;
   }
 
   return ( 
+    <div className="back-to-result">
+    <Link to="/">Back to Results</Link>
   <div className="cart">
     <div className="cart-list">
       <ul className="cart-list-container">
+
         <li>
           <h3>
             Shopping Cart
@@ -128,7 +131,7 @@ const totalPrice = itemsPrice + shippingPrice + taxPrice;
       <button onClick={checkoutHandler} className="button primary full-width" disabled={cartItems.length === 0}>
         Proceed to Checkout
       </button>
-
+        </div>
   </div>
   )}
 

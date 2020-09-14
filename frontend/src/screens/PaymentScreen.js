@@ -77,6 +77,18 @@ function PaymentScreen(props) {
                   type="radio"
                   name="paymentMethod"
                   id="paymentMethod"
+                  value="FPS"
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                ></input>
+                <label for="paymentMethod">FPS</label>
+               </div>
+            </li>
+            <li>
+              <div>
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  id="paymentMethod"
                   value="BankTransfer"
                   onChange={(e) => setPaymentMethod(e.target.value)}
                 ></input>
@@ -85,12 +97,12 @@ function PaymentScreen(props) {
             </li>
 
             <li>
-                {/* <form className="gotOrder" onSubmit={sendEmail}> */}
-                {/* <textarea style={{display:"none"}} name="GotOrder" defaultValue="You've Got an Order!" /> */}
+                <form className="gotOrder" onSubmit={sendEmail}>
+                <textarea style={{display:"none"}} name="GotOrder" defaultValue="You've Got an Order!" />
                 <button type="submit" className="button primary">
                 Continue
                 </button>
-              {/* </form> */}
+              </form>
             </li>
           </ul>
         </form>

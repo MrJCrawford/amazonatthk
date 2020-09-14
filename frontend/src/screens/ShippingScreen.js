@@ -26,33 +26,32 @@ function ShippingScreen(props) {
           <li>
             <h2>Shipping</h2>
           </li>
-
           <li>
-            <label htmlFor="address">
+            <label htmlFor="name">
+              Name
+          </label>
+            <input type="text" name="name" id="frmNameA" placeholder="Full Name" required autocomplete="name" onChange={(e) => setCity(e.target.value)}>
+            </input>
+          </li>
+          <li>
+            <label htmlFor="frmPhoneNumA">
+              Contact Number
+          </label>
+            <input type="tel" name="phone" id="frmPhoneNumA" placeholder="95675678" required autocomplete="tel" onChange={(e) => setPostalCode(e.target.value)}>
+            </input>
+          </li>
+          <li>
+            <label htmlFor="frmAddressS">
               Address
           </label>
-            <input type="text" name="address" id="address" onChange={(e) => setAddress(e.target.value)}>
+            <input type="text" name="ship-address" id="frmAddressS" placeholder="Flat 20A, 20/F, Tower 11 Example Bay TAI KOK TSUI KOWLOON" required autocomplete="shipping street-address" onChange={(e) => setAddress(e.target.value)}>
             </input>
           </li>
           <li>
-            <label htmlFor="city">
-              City
+            <label htmlFor="text">
+              Special Requests (if any)
           </label>
-            <input type="text" name="city" id="city" onChange={(e) => setCity(e.target.value)}>
-            </input>
-          </li>
-          <li>
-            <label htmlFor="postalCode">
-              Postal Code
-          </label>
-            <input type="text" name="postalCode" id="postalCode" onChange={(e) => setPostalCode(e.target.value)}>
-            </input>
-          </li>
-          <li>
-            <label htmlFor="country">
-              Country
-          </label>
-            <input type="text" name="country" id="country" onChange={(e) => setCountry(e.target.value)}>
+            <input type="text" name="text" id="text" onChange={(e) => setCountry(e.target.value)}>
             </input>
           </li>
 
