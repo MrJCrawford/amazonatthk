@@ -134,6 +134,7 @@ a:hover {
 .product-name {
   font-size: 2rem;
   font-weight: bold;
+  text-transform: capitalize;
 }
 .product-name a:link {
   color: #606060;
@@ -197,6 +198,7 @@ a:hover {
  .product-name {
    font-size: 2rem;
    font-weight: bold;
+   text-transform: capitalize;
  }
  .product-brand {
    font-size: 1.2rem;
