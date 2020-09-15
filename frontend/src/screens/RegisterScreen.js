@@ -26,6 +26,7 @@ function RegisterScreen(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(register(name, email, password));
+    props.history.push("/signin?redirect=shipping");
     alert("Please Sign In!");
   }
   return <div className="form">
