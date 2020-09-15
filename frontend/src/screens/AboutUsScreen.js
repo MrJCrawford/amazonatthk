@@ -7,7 +7,7 @@ export default class AboutUsScreen extends Component {
     return (
       <React.Fragment>
       <div className="back-to-result">
-      <Link to="/">Back to Results</Link>
+      <Link to="/">&#8592;Back to Results</Link>
       </div>
             <div className="about-section">
             <h2>About Us</h2>

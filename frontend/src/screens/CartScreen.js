@@ -10,7 +10,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import 'tippy.js/dist/tippy.css';
 
 const ServiceChargeIcon = () => (
-  <Tippy content={<span>The Service Charge is 15% of the Subtotal. The Minimum Charge is 15 HKD.</span>}>
+  <Tippy content={<span>The minimum Shipping Fee is 28 HKD.</span>}>
     <InfoIcon/>
   </Tippy>
 )
@@ -31,14 +31,14 @@ if (itemsWeight<1){
   tempWeight = 28} else {
   tempWeight = 28 + (Math.ceil((itemsWeight-1)*2)*5)
   }
-let tempService = 0;
-if (itemsPrice<100){
-  tempService = 15} else {
-  tempService = itemsPrice * 0.15
-  }
+// let tempService = 0;
+// if (itemsPrice<100){
+//   tempService = 15} else {
+//   tempService = itemsPrice * 0.15
+//   }
 const shippingPrice = parseFloat(tempWeight.toFixed(2));
-const taxPrice = parseFloat(tempService.toFixed(2));
-const totalPrice = itemsPrice + shippingPrice + taxPrice;
+// const taxPrice = parseFloat(tempService.toFixed(2));
+const totalPrice = itemsPrice + shippingPrice;
 /* Requested to have full price at cart IF FORMULA CHANGES MODIFY HERE*/
 
   const productId = props.match.params.id;
@@ -59,7 +59,7 @@ const totalPrice = itemsPrice + shippingPrice + taxPrice;
 
   return ( 
     <div className="back-to-result">
-    <Link to="/">Back to Results</Link>
+        <Link to="/">&#8592;Continue Shopping</Link>
   <div className="cart">
     <div className="cart-list">
       <ul className="cart-list-container">
@@ -120,9 +120,9 @@ const totalPrice = itemsPrice + shippingPrice + taxPrice;
          
       </h4>
       <h4>
-      Shipping: $ {shippingPrice}
+      Shipping: $ {shippingPrice} <ServiceChargeIcon/>
       </h4>
-      <h4>Service Fee: $ {taxPrice}  <ServiceChargeIcon/></h4>
+      {/* <h4>Service Fee: $ {taxPrice}  </h4> */}
       <h4>
       Total : $ {totalPrice} HKD
       </h4>

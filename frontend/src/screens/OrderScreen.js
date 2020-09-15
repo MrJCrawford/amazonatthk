@@ -142,17 +142,18 @@ function OrderScreen(props) {
               <div>Shipping</div>
               <div>${order.shippingPrice}</div>
             </li>
-            <li>
+            {/* <li>
               <div>Service Fee</div>
               <div>${order.taxPrice}</div>
-            </li>
+            </li> */}
             <li>
               <div>Order Total</div>
               <div>${order.totalPrice}</div>
-            </li>
-            
+            </li>          
           </ul>
-
+          <br/>
+          *** Your order will be shipped once payment is received. You can check your orders under your profile page. 
+          Thank you for shopping with Tiny Treasures HK!
           <div>
             </div>
 

@@ -35,8 +35,8 @@ function PlaceOrderScreen(props) {
     tempService = itemsPrice * 0.15
     }
   const shippingPrice = parseFloat(tempWeight.toFixed(2));
-  const taxPrice = parseFloat(tempService.toFixed(2));
-  const totalPrice = itemsPrice + shippingPrice + taxPrice;
+  // const taxPrice = parseFloat(tempService.toFixed(2));
+  const totalPrice = itemsPrice + shippingPrice;
 
   /* Requested to have full price at cart IF FORMULA CHANGES MODIFY THERE AS WELL*/
 
@@ -44,7 +44,7 @@ function PlaceOrderScreen(props) {
 
 
 const ServiceChargeIcon = () => (
-  <Tippy content={<span>The Service Charge is 15% of the Subtotal. The Minimum Charge is 15 HKD.</span>}>
+  <Tippy content={<span>The minimum Shipping Fee is 28 HKD.</span>}>
     <InfoIcon/>
   </Tippy>
 )
@@ -56,7 +56,7 @@ const ServiceChargeIcon = () => (
     // create an order
     dispatch(createOrder({
       orderItems: cartItems, shipping, payment, itemsPrice, shippingPrice,
-      taxPrice, totalPrice, itemsWeight
+      totalPrice, itemsWeight
     }));
     alert("Your Order has been placed! Please proceed to the payment page.");
     
@@ -154,13 +154,13 @@ const ServiceChargeIcon = () => (
             <div>${itemsPrice}</div>
           </li>
           <li>
-            <div>Shipping</div>
+            <div>Shipping <ServiceChargeIcon/></div>
             <div>${shippingPrice}</div>
           </li>
-          <li>
+          {/* <li>
             <div>Service Fee <ServiceChargeIcon/></div>
             <div>${taxPrice}</div>
-          </li>
+          </li> */}
           <li>
             <div>Order Total</div>
             <div>${totalPrice}</div>
