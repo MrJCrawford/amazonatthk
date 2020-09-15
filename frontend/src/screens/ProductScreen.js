@@ -93,7 +93,7 @@ function ProductScreen(props) {
                   Price: <b>${product.price} HKD</b>
                 </li>
                 <li>
-                  <Link to="/aboutus">Shipping and Service calculated at checkout.</Link>
+                  <Link to="/aboutus">Shipping calculated at checkout.</Link>
                 </li>
                 <li>
                   Description:
