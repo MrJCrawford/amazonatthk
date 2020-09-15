@@ -33,22 +33,46 @@ function OrderScreen(props) {
       <div className="placeorder">
         <div className="placeorder-info">
           <div>
-            <h3>
-              Shipping
-          </h3>
-            <div>
-            {order.shipping.city}, {order.shipping.postalCode}, {order.shipping.address},
-         {order.shipping.country}
-          </div>
-            <div>
-              {order.isDelivered ? "Delivered at " + order.deliveredAt : "Not Delivered."}
-            </div>
+                <h3>
+                  Shipping
+                </h3>
+              <div>
+              {order.shipping.city}
+              </div>
+              <div>
+              {order.shipping.postalCode}
+              </div>
+              <div>
+              {order.shipping.address}
+              </div>
+              <div>
+              {order.shipping.country}
+              </div>
+
+              {/* <div>
+                {order.isDelivered ? "Delivered at " + order.deliveredAt : "Not Delivered."}
+              </div> */}
           </div>
           <div>
             <h3>Payment</h3>
             <div>
               Payment Method: {order.payment.paymentMethod}
             </div>
+
+            <ol className="payment-methods">
+              <li>
+              For HSBC Payme: <a href=" https://payme.hsbc/60261084" target="_blank" rel="noopener noreferrer"> Tap to PayMe!</a>
+              </li>
+              <img className="payme" src="\images\hsbcpayme.jpg" alt="payme"></img>
+              <li>
+              For FPS: Payment can be sent to 60261084.
+              </li>
+              <li>
+              For Bank Transfer:
+              <p>HSBC bank account 405 222 043 292 (Chan T** W**g)</p>
+              </li>
+            </ol>
+
             <div>
               {/* Paypal Connection*/}
               {/* {order.isPaid ? "Paid at " + order.paidAt : "Not Paid."} */}
@@ -119,7 +143,7 @@ function OrderScreen(props) {
               <div>${order.shippingPrice}</div>
             </li>
             <li>
-              <div>Service Fee Tax</div>
+              <div>Service Fee</div>
               <div>${order.taxPrice}</div>
             </li>
             <li>
@@ -130,7 +154,6 @@ function OrderScreen(props) {
           </ul>
 
           <div>
-            <h4>Please Transfer $ {order.totalPrice} to 60261084 via Payme to complete your order.</h4>
             </div>
 
 

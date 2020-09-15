@@ -58,7 +58,7 @@ const ServiceChargeIcon = () => (
       orderItems: cartItems, shipping, payment, itemsPrice, shippingPrice,
       taxPrice, totalPrice, itemsWeight
     }));
-    alert("Your Order has been placed. We will get in contact with you very soon!");
+    alert("Your Order has been placed! Please proceed to the payment page.");
     
   }
   
@@ -78,8 +78,16 @@ const ServiceChargeIcon = () => (
             Shipping
           </h3>
           <div>
-          {cart.shipping.city}, {cart.shipping.postalCode}, {cart.shipping.address},
-         {cart.shipping.country}
+          {cart.shipping.city}
+          </div>
+          <div>
+          {cart.shipping.postalCode}
+          </div>
+          <div>
+          {cart.shipping.address}
+          </div>
+          <div>
+          {cart.shipping.country}
           </div>
         </div>
         <div>
@@ -88,25 +96,7 @@ const ServiceChargeIcon = () => (
             <li>
             Payment Method: {cart.payment.paymentMethod}
             </li>
-            <ol className="payment-methods">
-              <li>
-              For HSBC Payme: <a href=" https://payme.hsbc/60261084" target="_blank" rel="noopener noreferrer"> Tap to PayMe!</a>
-              </li>
-              <img className="payme" src="\images\hsbcpayme.jpg" alt="payme"></img>
-              <li>
-              For FPS: Payment can be sent to 60261084.
-              </li>
-              <li>
-              For Bank Transfer:
-              <p>HSBC bank account 405 222 043 292 (Chan T** W**g)</p>
-              </li>
-            </ol>
-
-
-            
-
-
-          </div>
+            </div>
         </div>
         <div>
           <ul className="cart-list-container">

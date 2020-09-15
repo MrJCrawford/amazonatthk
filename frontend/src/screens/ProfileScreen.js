@@ -90,10 +90,10 @@ function ProfileScreen(props) {
             <table className="table">
               <thead>
                 <tr>
-                  <th>ID</th>
+                 <th>MY ORDERS</th>
                   <th>DATE</th>
                   <th>TOTAL</th>
-                  <th>PAID</th>
+                  {/* <th>PAID</th> */}
                   <th>ACTIONS</th>
                 </tr>
               </thead>
@@ -102,7 +102,7 @@ function ProfileScreen(props) {
                   <td>{order._id}</td>
                   <td>{order.createdAt}</td>
                   <td>{order.totalPrice}</td>
-                  <td>{order.isPaid}</td>
+                  {/* <td>{order.isPaid}</td> */}
                   <td>
                     <Link to={"/order/" + order._id}>DETAILS</Link>
                   </td>
