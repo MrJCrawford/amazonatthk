@@ -304,6 +304,9 @@ a > .rating > span:last-child {
   padding: 1rem;
   max-width: 88%;
 }
+.details-info-title{
+  text-transform: capitalize;
+}
 .details-image {
   flex: 1 1 40rem;
   margin-right: 2rem;

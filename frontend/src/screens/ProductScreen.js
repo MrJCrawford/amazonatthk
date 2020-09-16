@@ -79,7 +79,7 @@ function ProductScreen(props) {
             <div className="details-info">
               <ul>
                 <li>
-                  <h2>{product.name}</h2>
+                  <h2 className="details-info-title">{product.name}</h2>
                 </li>
                 <li>
                   <a href="#reviews">
