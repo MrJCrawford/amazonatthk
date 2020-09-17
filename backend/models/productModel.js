@@ -17,6 +17,7 @@ const prodctSchema = new mongoose.Schema({
   image3: { type: String, required: false },
   image4: { type: String, required: false },
   image5: { type: String, required: false },
+  index: { type: Number, default: 0},
   brand: { type: String, required: true },
   price: { type: Number, default: 0, required: true },
   weight: { type: Number, default: 99, required: true },

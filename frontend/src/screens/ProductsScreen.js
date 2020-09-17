@@ -18,6 +18,7 @@ function ProductsScreen(props) {
   const [image3, setImage3] = useState('');
   const [image4, setImage4] = useState('');
   const [image5, setImage5] = useState('');
+  const [index, setIndex] = useState('');
   const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState('');
@@ -63,6 +64,7 @@ function ProductsScreen(props) {
     setImage3(product.image3);
     setImage4(product.image4);
     setImage5(product.image5);
+    setIndex(product.index);
     setBrand(product.brand);
     setCategory(product.category);
     setCountInStock(product.countInStock);
@@ -80,6 +82,7 @@ function ProductsScreen(props) {
         image3,
         image4,
         image5,
+        index,
         brand,
         category,
         countInStock,
@@ -209,6 +212,16 @@ function ProductsScreen(props) {
                 {uploading && <div>Uploading...</div>} */}
               </li>
               <li>
+                <label htmlFor="index">Index</label>
+                <input
+                  type="text"
+                  name="index"
+                  value={index}
+                  id="index"
+                  onChange={(e) => setIndex(e.target.value)}
+                ></input>
+              </li>
+              <li>
                 <label htmlFor="brand">Brand</label>
                 <input
                   type="text"
@@ -254,7 +267,6 @@ function ProductsScreen(props) {
                   name="description"
                   value={description}
                   id="description"
-                  required
                   onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
               </li>

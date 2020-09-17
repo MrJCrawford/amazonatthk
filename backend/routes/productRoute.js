@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     ? req.query.sortOrder === 'lowest'
       ? { price: 1 }
       : { price: -1 }
-    : { _id: -1 };   
+    : { index: 1 };   
   const products = await Product.find({ ...category, ...searchKeyword }).sort(
     sortOrder
   );
@@ -67,6 +67,7 @@ router.put('/:id', isAuth, isAdmin, async (req, res) => {
     product.image3 = req.body.image3;
     product.image4 = req.body.image4;
     product.image5 = req.body.image5;
+    product.index = req.body.index;
     product.brand = req.body.brand;
     product.category = req.body.category;
     product.countInStock = req.body.countInStock;
@@ -96,6 +97,7 @@ router.post('/', isAuth, isAdmin, async (req, res) => {
     name: req.body.name,
     price: req.body.price,
     image: req.body.image,
+    index: req.body.index,
     brand: req.body.brand,
     weight: req.body.weight,
     category: req.body.category,
