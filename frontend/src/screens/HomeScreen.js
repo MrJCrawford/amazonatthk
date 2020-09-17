@@ -77,7 +77,7 @@ function HomeScreen(props) {
         </li>
         <li>
           <select name="sortOrder" onChange={sortHandlerValue}>
-            <option value="">Newest</option>
+            <option value="">Default</option>
             <option value="lowest">Lowest</option>
             <option value="highest">Highest</option>
           </select>
