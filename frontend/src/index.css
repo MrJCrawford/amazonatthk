@@ -620,6 +620,34 @@ tbody > tr:nth-child(odd) {
   height: 14px;
   width: 120px;
 }
+.category-buttons{
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 2rem;
+  flex-wrap: wrap;
+  
+}
+.category-button{
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: var(--mainBanner);
+  background: transparent;
+  border:0.05rem solid ;
+  border-radius:0.5rem;
+  cursor:pointer;
+  margin:0.2rem 0.5rem 0.2rem 0;
+  transition:all 0.5s ease-in-out;
+}
+.category-button:hover{
+      background:var(--mainLightBanner);
+      color:var(--mainBanner);
+}
+.category-button:focus{
+  outline:none;
+  background: var(--mainLightBanner);
+  color:var(--mainBanner);
+}  
 /*About Us*/
 
 .about-section {

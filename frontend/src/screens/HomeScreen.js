@@ -35,8 +35,35 @@ function HomeScreen(props) {
     <>
       <img className="banner" src="\images\TinyTreasuresBanner.png" alt="banner" />
       <hr/>
-      {category && <h2 style={{marginLeft:"0.5em", color:"var(--mainBanner)"}}>{category}</h2>}
-
+      { category.length >1 ? <h2 style={{marginLeft:"0.5em", color:"var(--mainBanner)"}}>{category}</h2> 
+                          : <h2 style={{marginLeft:"0.5em", color:"var(--mainBanner)"}}>All Products</h2>}
+      <div className="category-buttons">
+        <Link to="/">
+        <button className="category-button" onClick>All</button>
+        </Link>
+        <Link to="/category/Montessori">
+        <button className="category-button" onClick>Montessori</button>
+        </Link>
+        <Link to="/category/Pretend Play">
+        <button className="category-button" onClick>Pretend Play</button>
+        </Link>
+        <Link to="/category/Learning and Education">
+        <button className="category-button" onClick>Learning and Education</button>
+        </Link>
+        <Link to="/category/Electronics">
+        <button className="category-button" onClick>Electronics</button>
+        </Link>
+        <Link to="/category/Play Vehicles">
+        <button className="category-button" onClick>Play Vehicles</button>
+        </Link>
+        <Link to="/category/Books">
+        <button className="category-button" onClick>Books</button>
+        </Link>
+        <Link to="/category/Other">
+        <button className="category-button" onClick>Other</button>
+        </Link>
+      </div>
+      
       <ul className="filter">
         <li>
           <form onSubmit={submitHandler}>
