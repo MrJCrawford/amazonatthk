@@ -43,7 +43,9 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0rem;
+  position: fixed;
+  width: 100%;
 }
 .brand{
   padding-bottom: 0.5rem;
@@ -630,7 +632,7 @@ tbody > tr:nth-child(odd) {
 }
 .category-button{
   text-transform: capitalize;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--mainBanner);
   background: transparent;
   border:0.05rem solid ;
