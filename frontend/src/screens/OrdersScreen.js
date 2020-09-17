@@ -47,7 +47,7 @@ function OrdersScreen(props) {
           </thead>
           <tbody>
             {orders.map(order => (<tr key={order._id}>
-              <td>{order._id}</td>
+              <td>{order._id.slice(20,24)}</td>
               <td>{order.createdAt}</td>
               <td>$ {order.totalPrice}</td>
               <td>{order.itemsWeight} kg</td>
