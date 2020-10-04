@@ -58,8 +58,7 @@ const ServiceChargeIcon = () => (
       orderItems: cartItems, shipping, payment, itemsPrice, shippingPrice,
       totalPrice, itemsWeight
     }));
-    alert("Your Order has been placed! Please proceed to the payment page.");
-    
+       
   }
   
   useEffect(() => {

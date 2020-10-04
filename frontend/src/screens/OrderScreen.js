@@ -15,6 +15,7 @@ function OrderScreen(props) {
       props.history.push("/profile");
     } else {
       dispatch(detailsOrder(props.match.params.id));
+      alert("Your Order has been receieved! Please refer to the payment section to complete the order. We will ship as soon as payment is received.");
     }
     return () => {
     };
