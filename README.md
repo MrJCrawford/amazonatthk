@@ -15,6 +15,5 @@ https://tinytreasureshk.herokuapp.com/
 
 ![alt text](https://github.com/azwinlam/amazonatthk/blob/master/TTHK.png "SS1")
 ![alt text](https://github.com/azwinlam/amazonatthk/blob/master/TTHK2.png "SS2")
-![alt text](https://github.com/azwinlam/amazonatthk/blob/master/TTHK3.png "SS3")
-![alt text](https://github.com/azwinlam/amazonatthk/blob/master/TTHK4.png "SS4")
-![alt text](https://github.com/azwinlam/amazonatthk/blob/master/TTHK5.png "SS5")
+![alt text](https://github.com/azwinlam/amazonatthk/blob/master/TTHK4.png "SS3")
+![alt text](https://github.com/azwinlam/amazonatthk/blob/master/TTHK5.png "SS4")
