@@ -3,7 +3,7 @@
 All credits and codes goes to Coding with Basir.
 His video can be found here: https://www.youtube.com/watch?v=Fy9SdZLBTOo
 
-The goal of this project was to help my partner setup an ecommerce website to help sell children toys. Although this site was never used to generate revenue, it taught me how the MERN stack worked and the foundations of all ecommerce websites.
+The goal of this project was to help my partner setup an ecommerce website to help sell children toys. Although this site was never used to generate revenue, it taught me the foundations of all ecommerce websites using MERN stack coding.
 
 # Deployment
 
